@@ -11,6 +11,6 @@ public interface Bod
     double getDistance(Bod other);
     Bod Plus(Bod other);
     Bod Minus(Bod other);
-    boolean equals(Bod other);
+    boolean equals(Object other);
     String toString();
 }

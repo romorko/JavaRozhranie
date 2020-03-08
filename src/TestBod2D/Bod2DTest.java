@@ -4,11 +4,14 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class Bod2DTest
 {
-    Bod2D Prvy= new Bod2D(1,2);
-    Bod2D Druhy = new Bod2D(0,0);
+    Bod2D Prvy;
+    Bod2D Druhy;
+
     @org.junit.jupiter.api.BeforeEach
     void setUp()
     {
+        Prvy= new Bod2D(1,2);
+        Druhy = new Bod2D(2,3);
     }
 
     @org.junit.jupiter.api.Test
@@ -20,10 +23,12 @@ class Bod2DTest
     @org.junit.jupiter.api.Test
     void plus()
     {
+        assertEquals(Prvy.Plus(Druhy),new Bod2D(3,5));
     }
 
     @org.junit.jupiter.api.Test
     void minus()
     {
+        assertEquals(Prvy.Minus(Druhy),new Bod2D(-1,-1));
     }
 }
